@@ -1,5 +1,6 @@
-#include "widget.h"
+﻿#include "widget.h"
 #include "ui_widget.h"
+#include<QDebug>
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
@@ -11,5 +12,14 @@ Widget::Widget(QWidget *parent)
 Widget::~Widget()
 {
     delete ui;
+}
+
+
+void Widget::on_pushButton_clicked()
+{
+qDebug()<<"submit data:";
+qDebug()<<"firt name inserted:" << ui->fn->text();
+qDebug()<<"firt name inserted:" << ui->ln->text();
+qDebug()<<"message inserted:" << ui->msg->toPlainText();
 }
 
